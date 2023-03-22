@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        Type a number:
+        <input type="text" id="angka">
+    <button type="button" onclick="chek()">Click here</button>
+      <p id="isi"></p>
+    </form>
+
+    <script>
+        function chek(){
+        let angka=document.getElementById('angka').value;
+        let isi;
+         if(isNaN(angka)||angka ==0){
+            isi="<p style='color:red'>Invalid input</p>";
+        }
+         else if(angka %3 == 0 && angka %5 == 0){
+            isi="FizzBuzz";
+          
+        }
+       else if(angka %3 == 0){
+            isi="Fizz";
+         
+        }
+        else if(angka %5 == 0){
+              isi="Buzz";
+         
+        }
+       
+        else{
+            isi=angka;
+            
+        }
+       document.getElementById('isi').innerHTML=isi;
+        }
+    </script>
+</body>
+</html>
